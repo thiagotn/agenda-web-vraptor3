@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.modelo;
+package com.tnogueira.agendaweb.modelo;
 
 import java.util.Calendar;
 

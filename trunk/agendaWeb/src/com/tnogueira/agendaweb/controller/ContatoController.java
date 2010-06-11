@@ -1,16 +1,17 @@
-package br.inf.cbds.javaseguro.controller;
+package com.tnogueira.agendaweb.controller;
 
 import java.util.List;
+
+import com.tnogueira.agendaweb.dao.ContatoDao;
+import com.tnogueira.agendaweb.mail.Mensageiro;
+import com.tnogueira.agendaweb.mail.Mensagem;
+import com.tnogueira.agendaweb.modelo.Contato;
 
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.Hibernate;
 import br.com.caelum.vraptor.view.Results;
-import br.inf.cbds.javaseguro.dao.ContatoDao;
-import br.inf.cbds.javaseguro.mail.Mensageiro;
-import br.inf.cbds.javaseguro.mail.Mensagem;
-import br.inf.cbds.javaseguro.modelo.Contato;
 
 @Resource
 public class ContatoController {

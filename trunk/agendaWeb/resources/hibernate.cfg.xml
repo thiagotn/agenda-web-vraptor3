@@ -22,9 +22,9 @@
 		<property name="hibernate.c3p0.max_statements">50</property>
 		<property name="hibernate.c3p0.idle_test_period">1000</property>		
 		
-		<mapping class="br.inf.cbds.javaseguro.modelo.Contato" />
-		<mapping class="br.inf.cbds.javaseguro.modelo.Usuario" />	
-		<mapping class="br.inf.cbds.javaseguro.modelo.Perfil" />
+		<mapping class="com.tnogueira.agendaweb.modelo.Contato" />
+		<mapping class="com.tnogueira.agendaweb.modelo.Usuario" />	
+		<mapping class="com.tnogueira.agendaweb.modelo.Perfil" />
 
 	</session-factory>
 </hibernate-configuration>

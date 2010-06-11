@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.mail;
+package com.tnogueira.agendaweb.mail;
 
 public class Mensagem 
 {

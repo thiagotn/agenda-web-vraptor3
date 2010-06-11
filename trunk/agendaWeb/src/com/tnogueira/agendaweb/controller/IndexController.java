@@ -1,14 +1,15 @@
-package br.inf.cbds.javaseguro.controller;
+package com.tnogueira.agendaweb.controller;
 
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import com.tnogueira.agendaweb.dao.ContatoDao;
+import com.tnogueira.agendaweb.modelo.Contato;
+
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
-import br.inf.cbds.javaseguro.dao.ContatoDao;
-import br.inf.cbds.javaseguro.modelo.Contato;
 
 @Resource
 public class IndexController {

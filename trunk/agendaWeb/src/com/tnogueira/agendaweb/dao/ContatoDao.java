@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.dao;
+package com.tnogueira.agendaweb.dao;
 
 import java.util.List;
 
@@ -8,8 +8,9 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 
+import com.tnogueira.agendaweb.modelo.Contato;
+
 import br.com.caelum.vraptor.ioc.Component;
-import br.inf.cbds.javaseguro.modelo.Contato;
 
 @Component
 public class ContatoDao {

@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.mail;
+package com.tnogueira.agendaweb.mail;
 
 import java.io.InputStream;
 import java.util.Properties;

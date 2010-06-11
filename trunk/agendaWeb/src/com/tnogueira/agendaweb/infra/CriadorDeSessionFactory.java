@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.infra;
+package com.tnogueira.agendaweb.infra;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
