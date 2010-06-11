@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.security;
+package com.tnogueira.agendaweb.security;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,8 +22,9 @@ import javax.security.auth.login.LoginException;
 import javax.security.auth.spi.LoginModule;
 import javax.sql.DataSource;
 
-import br.inf.cbds.javaseguro.security.principal.Perfil;
-import br.inf.cbds.javaseguro.security.principal.Usuario;
+import com.tnogueira.agendaweb.security.principal.Perfil;
+import com.tnogueira.agendaweb.security.principal.Usuario;
+
 
 public class CBDSLoginModule implements LoginModule 
 {

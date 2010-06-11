@@ -1,4 +1,4 @@
-package br.inf.cbds.javaseguro.security.principal;
+package com.tnogueira.agendaweb.security.principal;
 
 import java.security.Principal;
 import java.util.Set;
