@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context auth="Container" >
+
+	<Realm className="org.apache.catalina.realm.JAASRealm" appName="AgendaWebJAAS"
+		
+		userClassNames="br.inf.cbds.javaseguro.security.principal.Usuario"
+		roleClassNames="br.inf.cbds.javaseguro.security.principal.Perfil" />
+		
+	<Resource 
+      	 	auth="Container" 
+      	 	driverClassName="com.mysql.jdbc.Driver" 
+      	 	maxActive="100" 
+      	 	maxIdle="30" 
+      	 	name="jdbc/agendaweb" 
+      	 	type="javax.sql.DataSource" 
+      	 	url="jdbc:mysql://127.0.0.1:3306/agendaweb?autoReconnect=true" 
+      	 	username="root"
+      	 	password="root"/>
+
+</Context>
