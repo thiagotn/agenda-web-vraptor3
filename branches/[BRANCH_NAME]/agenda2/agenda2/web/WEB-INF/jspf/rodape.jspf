@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<%@ page session = "true" language="java" contentType="text/html" pageEncoding="ISO-8859-1" %>
+
+<div class="clear"></div>
+
+<fmt:setLocale value="pt_BR"/>
+<!-- End Right Column -->
+
+<div class="clear"></div>
+
+</div>	   
+<!-- End Faux Columns --> 
+
+<!-- Begin Footer -->
+<div id="footer">
+    <fmt:message key="label.rodape"/>
+</div>
+<!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+</body>
+</html>
