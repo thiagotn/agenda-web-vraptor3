@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+
+Esta é a página de cabeçalho, ela foi criada todo tipo estático para que o dados não sejam alterados
+durante o uso do site, ele configura o idioma,monta a lista de menus e exibe informações de erro.
+
+-->
+
+<%@ page session = "true" language="java" contentType="text/html" pageEncoding="ISO-8859-1" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+
+<script src="<c:url value="/template/js/jquery.js"/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value="/template/css/displaytag.css" />" />
+<link rel="stylesheet" type="text/css" href="<c:url value="/template/css/alternative.css" />" />
+<link rel="stylesheet" type="text/css" href="<c:url value="/template/css/main.css" />" />
+
+<link href="<c:url value="/template/css/bootstrap-responsive.css"/>" rel="stylesheet"/>
+<link href="<c:url value="/template/css/bootstrap.css"/>" rel="stylesheet"/>
+
+<script type="text/javascript" language="javascript" src="<c:url value="/template/js/ajax.js"/>"></script>
+
+<script type="text/javascript">
+    $(function ready(){
+        $("#errors").fadeIn(1000);
+        $("#errors").fadeOut(6000);
+        $("#errors").style.diplay = none;
+    });        
+</script>
+
+<c:choose>
+    <c:when test="${empty param.locale}">        
+        <fmt:setLocale value="pt_BR" /> 
+        <c:set scope="session" var="lingua" value="pt_BR"/>
+    </c:when>
+    <c:otherwise>
+        <c:choose>
+            <c:when test="${param.locale eq 'en_US'}">
+                <c:set scope="session" var="lingua" value="${param.locale}"/>
+                <fmt:setLocale value="${param.locale}" />
+            </c:when>
+            <c:otherwise>
+                <c:set scope="session" var="lingua" value="${param.locale}"/>
+                <fmt:setLocale value="${param.locale}" /> 
+            </c:otherwise>
+        </c:choose>        
+    </c:otherwise>
+</c:choose>    
+
+<fmt:setBundle basename="org.ifsp.agenda.lingua.messages"/>
+
+<title><fmt:message key="site.titulo"/></title>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img src="<c:url value="/template/img/topo.jpg"/>"></img>
+        </div>
+        <div id="navigation">
+            <fmt:message key="label.ola"/>
+            <c:if test="${empty usuarioWeb}">
+                <div style="float:right;height:20px">
+                    <a href="?locale=pt_BR"><img src="<c:url value="/template/img/brasil.png"/>"  name="lingua" alt="pt_BR"></img></a>
+                    <a href="?locale=en_US"><img src="<c:url value="/template/img/eua.png"/>"  name="lingua" alt="en_US"></img></a>
+                </div>
+            </c:if>
+            <c:if test="${not empty usuarioWeb}">
+                ${usuarioWeb.nome}!
+                <a href="/agenda/logout.view"><fmt:message key="label.sair"/></a>
+            </c:if>
+            <c:if test="${empty usuarioWeb}">
+                <fmt:message key="label.visitante"/>!
+               <a href="/agenda/login.jsp"><fmt:message key="botao.acessar"/></a>
+            </c:if>		       		 
+
+        </div>
+
+        <div id="faux">
+
+            <div id="leftcolumn">
+                <c:if test="${not empty usuarioWeb}">
+                    <ul class="nav nav-list">
+                        <li>
+                            <a href="/agenda/contato/formContatos.view"><fmt:message key="menu.adicionacontatos"/></a>
+                        </li>
+                        <li>
+                            <a href="/agenda/compromisso/formCompromissos.view"><fmt:message key="menu.adicionacompromissos"/></a>
+                        </li>                              
+                        <li>
+                            <a onclik="navega()" href="/agenda/contato/listaContatos.view"><fmt:message key="menu.listacontatos"/></a>
+                        </li>
+                        <li>
+                            <a href="/agenda/compromisso/listaCompromissos.view"><fmt:message key="menu.listacompromissos"/></a>
+                        </li>  
+                        <li>
+                            <a href="<c:url value="/usuario/editaUsuarios.view?id=${usuarioWeb.id}"/>">
+                                <fmt:message key="menu.minhasconfiguracoes"/>
+                            </a>
+                        </li>                              
+                        <li>
+                            <c:if test="${usuarioWeb.login == 'admin'}">
+                                <a href="/agenda/usuario/formUsuarios.view"><fmt:message key="menu.adicionausuarios"/></a>
+                            </c:if>
+                        </li>
+                        <li>
+                            <c:if test="${usuarioWeb.login == 'admin'}">
+                                <a href="/agenda/usuario/listaUsuarios.view"><fmt:message key="menu.listausuarios"/></a>
+                            </c:if>
+                        </li> 
+                    </ul>
+                </c:if>
+            </div>
+            <!-- End Left Column -->
+
+            <!-- Begin Right Column -->
+            <div class="index">
+                <div class="login">
+                    <div id="errors">
+                        <c:if test="${not empty errors}">
+                            <img src="<c:url value="/template/img/ajax-loader.gif"/>" style="margin-right: 10px"/>
+                            <c:forEach items="${errors}" var="error">
+                                ${error.mensagem}
+                            </c:forEach>
+                        </c:if>
+                    </div>
+                </div>
+

@@ -1,0 +1,145 @@
+
+* { padding: 0; margin: 0;
+}
+
+
+#titulo{
+    padding: auto;
+    margin: 0px auto;
+}
+#wrapper { 
+    margin: 0 auto;
+    width: 922px;
+}
+#faux {
+    background-image: url(\agenda2\web\template\imgfaux-1-2-col.gif);
+    margin-bottom: 5px;
+    overflow: auto;
+    width: 100%;
+}
+#header {
+    color: #333;
+    width: 912px;
+    padding: 1px;
+    height: 120px;
+    margin: auto 0px;
+    font-size: 18px;
+    text-align: center;
+}
+#navigation {
+    color: #333;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    background: #ABBEBE;
+}
+#leftcolumn { 
+    display: inline;
+    color: #333;
+    margin: 10px;
+    padding: 0px;
+    padding-top: 40px;
+    width: 195px;
+    float: left;
+}
+#rightcolumn { 
+    float: right;
+    color: #333;
+    margin: 0px;
+    text-align: justify;
+    border-left: 1px dotted;
+    border-color: #999;
+    padding-left: 40px;
+    margin-bottom: 3px;
+    width: 640px;
+    display: inline;
+    position: relative;
+    text-align: match-parent;
+}
+.index { 
+    float: right;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 3px;
+    width: 73%;
+    display: inline;
+    text-align: match-parent;
+}
+#footer { 
+    width: 902px;
+    clear: both;
+    color: #333;
+    background: #ABBEBE;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+    text-align: center;
+}
+#errors {
+    color: #FF0000;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 530px;
+    height: 5px;
+    top: 155px;
+    text-decoration-color:  #FF0000;
+    font-family:   inherit;
+    font-size: 14px;
+    font-style: oblique;
+    display: none;
+    position: absolute;
+}	
+.clear { clear: both; background: none; }
+.link {
+    text-decoration: underline;
+    border: none;
+    background: none;
+    color: blue;
+    cursor: pointer;
+}
+.imagem{
+    width:200px;
+    float: left;
+    top:10%;
+    margin-left:5px;
+}
+.centro {
+    width:450px;
+    position: relative;
+    top:50%;
+    left:1%;
+    margin-left:20px;
+
+}
+.centro input[type="submit"] {
+    margin-left: 60px;
+    margin-right: -24px;
+    display: inline-block;
+}
+.centro label {
+    width: 67px;
+}
+.centro span {
+    text-align: center;
+}
+.tabela {
+    text-align: center;
+    font-size:28px;
+    width: 550px;
+    font-family:inherit;
+    color: #006dcc;
+    margin-top: 13px;
+    padding-bottom:12px;
+}
+.form {
+    background-color: #EEEEEE;
+    border-color: #999999;
+    border-style: dotted dotted dotted;
+    border-width: 1px 1px 1px 1px;
+    display: block;
+    margin-top: 10px;
+    padding: 10px 1px 2px 2px;
+    width: 80%;
+
+    padding-bottom: 5px;
+}

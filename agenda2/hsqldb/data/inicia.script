@@ -1,0 +1,10 @@
+CREATE FUNCTION md5(VARBINARY(128))
+RETURNS VARBINARY(226)
+LANGUAGE JAVA
+DETERMINISTIC
+NO SQL
+EXTERNAL NAME 'CLASSPATH:org.hsqldb.lib.MD5.digest';
+
+insert into usuario values(1,'admin',md5('123', 'ISO-8859-1') ,'Administrador','tonlisboa@gmail.com',1,'desacocheio')
+
+UPDATE usuario SET senha = md5('123', 'ISO-8859-1') WHERE nome='admin'
