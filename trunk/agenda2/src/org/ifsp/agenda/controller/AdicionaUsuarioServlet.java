@@ -185,6 +185,5 @@ public class AdicionaUsuarioServlet extends HttpServlet {
         } catch (Exception ex) {
             throw new AuthenticationFailedException("Ocorreu um erro de altenticação" + ex);
         }
-
     }
 }

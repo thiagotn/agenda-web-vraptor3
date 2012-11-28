@@ -62,8 +62,9 @@ ocorra algum erro será exibido a informação de erro no topo da página lista de c
             <div id="emp" style="display:none">
                 <p><label for="empresa"><fmt:message key="campo.empresa"/></label><input type="text" name="empresa" value="${empresa}" style="width:250px"/></p>	
             </div>
+            <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>  
         </fieldset>
-        <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>            
+                  
     </form>
 </body>
 

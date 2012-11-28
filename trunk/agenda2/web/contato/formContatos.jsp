@@ -69,9 +69,8 @@ ao tipo de contato.
         <div id="emp" style="display:none">
             <p><label for="empresa"><fmt:message key="campo.empresa"/></label><input type="text" id="empresa" name="empresa" style="width:250px"></p>	
         </div>
-    </fieldset>   
-    <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>        
-
+    <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>          
+    </fieldset>         
 </form>
 
 <%@ include file="../WEB-INF/jspf/rodape.jspf" %>

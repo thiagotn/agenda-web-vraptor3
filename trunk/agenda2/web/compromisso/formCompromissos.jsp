@@ -41,43 +41,43 @@ contatos estevir vazia.
     <fieldset>
         <jsp:useBean id="data" class="java.util.Date"/>  
         <p><label for="data"><fmt:message key="campo.data"/></label>
-        <select name="data">  
-            <c:forEach  items="${datas}" var="dia">  
-                <option value="${dia}">
-                    ${dia}
-                </option>  
-            </c:forEach>  
-        </select>
+            <select name="data">  
+                <c:forEach  items="${datas}" var="dia">  
+                    <option value="${dia}">
+                        ${dia}
+                    </option>  
+                </c:forEach>  
+            </select>
         </p>
         <p><label for="hora"><fmt:message key="campo.hora"/></label>
-        <select id="hora" name="hora">
-            <c:forEach  var="hora" begin="0" end="23">                              
-                <c:choose>
-                    <c:when test="${hora<10}">
-                        <option value="0${hora}:00">0${hora}:00</option> 
-                    </c:when>
-                    <c:otherwise>
-                        <option value="${hora}:00">${hora}:00</option> 
-                    </c:otherwise>
-                </c:choose>                             
-            </c:forEach>                         
-        </select>
+            <select id="hora" name="hora">
+                <c:forEach  var="hora" begin="0" end="23">                              
+                    <c:choose>
+                        <c:when test="${hora<10}">
+                            <option value="0${hora}:00">0${hora}:00</option> 
+                        </c:when>
+                        <c:otherwise>
+                            <option value="${hora}:00">${hora}:00</option> 
+                        </c:otherwise>
+                    </c:choose>                             
+                </c:forEach>                         
+            </select>
         </p>
         <p><label for="contato"><fmt:message key="campo.contato"/></label>
-        <select style="width:300px" id="contato" name="contato">
-            <c:forEach  items="${contatos}" var="contato">  
-                <option value="${contato.nome}">${contato.nome}</option>  
-            </c:forEach>  
-        </select>
+            <select style="width:300px" id="contato" name="contato">
+                <c:forEach  items="${contatos}" var="contato">  
+                    <option value="${contato.nome}">${contato.nome}</option>  
+                </c:forEach>  
+            </select>
         </p>
         <p><label for="local"><fmt:message key="campo.local"/></label>
-        <input type="text" name="local" value="<fmt:message key="texto.digiteaqui"/>" style="width:210px"/>
+            <input type="text" name="local" value="<fmt:message key="texto.digiteaqui"/>" style="width:210px"/>
         </p>                
         <p><label for="descricao"><fmt:message key="campo.descricao"/></label>
-        <textarea  style="height:83px;width:395px" name="descricao" rows="4"><fmt:message key="texto.digiteaqui"/></textarea>
+            <textarea  style="height:83px;width:395px" name="descricao" rows="4"><fmt:message key="texto.digiteaqui"/></textarea>
         </p>
+        <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>        
     </fieldset>
-    <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>        
 </form>
 
 <%@ include file="../WEB-INF/jspf/rodape.jspf" %>

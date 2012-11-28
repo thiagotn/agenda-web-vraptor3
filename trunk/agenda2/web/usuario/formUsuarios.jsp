@@ -43,15 +43,15 @@ Agenda.
         <p><label for="email"><fmt:message key="campo.email"/></label><input type="text" id="email" name="email" style="width:300px"></p>
         <p><label for="senha"><fmt:message key="campo.senha"/></label><input type="password" id="senha" name="senha" value="null" style="width:192px"></p>
         <p><label for="alerta"><fmt:message key="campo.alertar"/></label>
-        <select id="alerta" name="alerta">
-            <option value="1"><fmt:message key="campo.1dia"/></option>  
-            <option value="2"><fmt:message key="campo.2dias"/></option> 
-            <option value="1"><fmt:message key="campo.3dias"/></option>
-            <option value="1"><fmt:message key="campo.4dias"/></option>  
-            </p></select>
+            <select id="alerta" name="alerta">
+                <option value="1"><fmt:message key="campo.1dia"/></option>  
+                <option value="2"><fmt:message key="campo.2dias"/></option> 
+                <option value="1"><fmt:message key="campo.3dias"/></option>
+                <option value="1"><fmt:message key="campo.4dias"/></option>  
+        </p></select>
         <p><label for="senha"><fmt:message key="campo.senhagmail"/></label><input type="password" id="gmail" name="gmail" value="null" style="width:192px"></p>        
-    </fieldset>   
-<p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>        
+        <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>        
+    </fieldset>  
 </form>
 
 <%@ include file="../WEB-INF/jspf/rodape.jspf" %>
