@@ -85,9 +85,8 @@ ocorra algum erro será exibido a informação de erro no topo da página lista de c
         <p><label for="descricao"><fmt:message key="campo.descricao"/> </label>
             <textarea  style="height:83px;width:395px" name="descricao" rows="4">${descricao}</textarea>
         </p>
+        <p><input type="submit" value="<fmt:message key="botao.enviar"/> " class="btn btn-primary" style="margin-left:95px"/></p>
     </fieldset> 
-    <p><input type="submit" value="<fmt:message key="botao.enviar"/> " class="btn btn-primary" style="margin-left:95px"/></p>
-    
 </form>
 
 <%@ include file="../WEB-INF/jspf/rodape.jspf" %>

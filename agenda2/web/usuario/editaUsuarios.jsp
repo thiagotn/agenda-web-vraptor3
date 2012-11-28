@@ -33,24 +33,22 @@ ele edite, exclua e visualize os dados dos usários cadastrados.
 <title><fmt:message key="site.titulo"/></title>
 
 <div class="tabela"><fmt:message key="titulo.editarusuario"/></div>
-<form class="form" style="height: 260px" action="<c:url value="/usuario/alteraUsuarios.view"/>"  method="post">
+<form class="form" style="height: 250px" action="<c:url value="/usuario/alteraUsuarios.view"/>"  method="post">
     <fieldset>
-        <fieldset> 
-            <input type="hidden" id="id" name="id" value="${id}">
-            <input type="hidden" id="login" name="login" value="${login}">
-            <p><label for="nome"><fmt:message key="campo.nome"/></label><input type="text" id="nome" name="nome" value="${nome}" style="width:300px"></p>
-            <p><label for="email"><fmt:message key="campo.email"/></label><input type="text" id="email" name="email" value="${email}" style="width:300px"></p>
-            <p><label for="senha"><fmt:message key="campo.senha"/></label><input type="password" id="senha" name="senha" value="<c:out value="null"/>" style="width:192px;"><span style="color: red"><fmt:message key="label.digitanovasenha"/><span></p>
-            
-            <p><label for="alerta"><fmt:message key="campo.alertar"/></label>
-            <select id="alerta" name="alerta">
-                <option value="1"><fmt:message key="campo.1dia"/></option>  
-                <option value="2"><fmt:message key="campo.2dias"/></option> 
-                <option value="1"><fmt:message key="campo.3dias"/></option>
-                <option value="1"><fmt:message key="campo.4dias"/></option>  
-                </p></select>        
-            <p><label for="senha"><fmt:message key="campo.senhagmail"/></label><input type="password" id="gmail" name="gmail" value="<c:out value="null"/>" style="width:192px"><span style="color: red"><fmt:message key="label.digitanovasenha"/><spa></p>   
-        </fieldset>   
+        <input type="hidden" id="id" name="id" value="${id}">
+        <input type="hidden" id="login" name="login" value="${login}">
+        <p><label for="nome"><fmt:message key="campo.nome"/></label><input type="text" id="nome" name="nome" value="${nome}" style="width:300px"></p>
+        <p><label for="email"><fmt:message key="campo.email"/></label><input type="text" id="email" name="email" value="${email}" style="width:300px"></p>
+        <p><label for="senha"><fmt:message key="campo.senha"/></label><input type="password" id="senha" name="senha" value="<c:out value="null"/>" style="width:192px;"><span style="color: red"><fmt:message key="label.digitanovasenha"/></span></p>            
+        <p><label for="alerta"><fmt:message key="campo.alertar"/></label></p>
+        <select id="alerta" name="alerta">
+            <option value="1"><fmt:message key="campo.1dia"/></option>  
+            <option value="2"><fmt:message key="campo.2dias"/></option> 
+            <option value="1"><fmt:message key="campo.3dias"/></option>
+            <option value="1"><fmt:message key="campo.4dias"/></option>  
+        </select>        
+        <p><label for="senha"><fmt:message key="campo.senhagmail"/></label><input type="password" id="gmail" name="gmail" value="<c:out value="null"/>" style="width:192px"><span style="color: red"><fmt:message key="label.digitanovasenha"/></span></p>   
         <p><input type="submit" value="<fmt:message key="botao.enviar"/>" class="btn btn-primary" style="margin-left:95px"/></p>
+    </fieldset>           
 </form>
 <%@ include file="../WEB-INF/jspf/rodape.jspf" %>
