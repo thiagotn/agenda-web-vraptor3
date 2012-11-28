@@ -100,24 +100,15 @@ public class AdicionaCompromissoServlet extends HttpServlet {
                 CompromissoDAO cdao = new CompromissoDAO();
                 //Inserir o compromisso
                 cdao.inserirCompromisso(compromisso);
-                //Define usuário para enviar email para o contato
-                UsuarioDAO udao = new UsuarioDAO();
-                Usuario novoUsuario = null;
-                try {
-                   /**Pesquisa se o usuário resgatado da sessão existe**/
-                    novoUsuario = udao.pesquisarUsuario(usuario);
-                } catch (UsuarioInexistenteException ex) {
-                    /**Se não encontrar armazena o resultado aqui**/
-                    errors.add(new org.ifsp.agenda.modelo.MensagemErro("mensagem", rb.getString("erro.localizar.usuario")));
-                }
+                //Define usuário para enviar email para o contat                            
                 /**Instancia ContatoDAO e excuta o método pesquisarContato para verificar se o contato existe.**/        
                 ContatoDAO dao = new ContatoDAO();
                /**Pesquisa se o contato existe**/
-                novoContato = dao.pesquisarContato(contato, novoUsuario);
+                novoContato = dao.pesquisarContato(contato, usuario);
                 try {
                     if (usuario.getSenhaEmail() != null) {
                        /**Senha não houver erros um email é enviado ao contato sobre o compromisso agendado**/
-                        enviarEmailNovoUsuario(novoContato, compromisso, novoUsuario);
+                        enviarEmailNovoUsuario(novoContato, compromisso, usuario);
                     }
                 } catch (AuthenticationFailedException ex) {
                     /**Caso haja erro durante o envio do emial o resultado é armazenado aqui**/
