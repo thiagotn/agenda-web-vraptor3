@@ -170,7 +170,7 @@ public class AdicionaUsuarioServlet extends HttpServlet {
             msg = "Olá %s, você foi adicionado ao meu projeto Web Agenda. Por favor me ajude a testá-lo."
                     + " Nele você poderá incluir seus contatos e compromissos e enviar emails. Cadastre os seus contatos"
                     + " e insira seus compromissos, os seus dados serão mantidos em sigilo. Para acessá-lo use o link"
-                    + " (http://%s:8080/agenda) entre com o login é %s e a senha %s e depois altere as suas configurações"
+                    + " (http://%s:8084/agenda) entre com o login é %s e a senha %s e depois altere as suas configurações"
                     + " com e-mail e senha do gmail. Se você não tiver uma conta no gmail por favor acesse o site"
                     + " http://www.gmail.com e crie uma, pois o sistema envia e-mails para contatos através dele. \n\nDesde"
                     + " já agradeço a sua colaboração. \n\nCaso não queira participar por favor responda este."
